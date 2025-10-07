@@ -1,54 +1,191 @@
 <!DOCTYPE html>
-<html lang="es">
+
+<html lang="es" dir="ltr">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Mi Primera Página Web - Felipe López</title>
-  <style>
-    body {
-      background-color: #fff;
-      color: #000;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: underline;
-    }
-    a:focus, a:hover {
-      outline: 3px solid #ffbf47;
-      outline-offset: 2px;
-      background-color: #fffbe6;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 1em 0;
-    }
-    a:visited {
-      color: #551a8b;
-    }
-  </style>
+
+ <meta charset="UTF-8" />
+
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+ <title>Mi Primera Página Web — Felipe López</title>
+
+ <style>
+
+  :root{
+
+   --link: #004099;
+
+   --link-visited: #5a2a99;
+
+   --focus: #1a73e8;
+
+   --text: #000;
+
+   --bg: #fff;
+
+  }
+
+  * { box-sizing: border-box; }
+
+  body{
+
+   margin: 20px;
+
+   background: var(--bg);
+
+   color: var(--text);
+
+   font-family: Arial, Helvetica, sans-serif;
+
+   line-height: 1.6;
+
+  }
+
+  .skip-link{
+
+   position: absolute;
+
+   left: -9999px;
+
+   top: 0;
+
+   padding: 8px 12px;
+
+   background: #f1f3f4;
+
+   border: 2px solid var(--focus);
+
+   text-decoration: none;
+
+   z-index: 1000;
+
+  }
+
+  .skip-link:focus-visible{
+
+   left: 12px;
+
+   top: 12px;
+
+   outline: none;
+
+  }
+
+  a{
+
+   color: var(--link);
+
+   text-decoration: underline;
+
+  }
+
+  a:visited{ color: var(--link-visited); }
+
+  a:focus-visible,
+
+  button:focus-visible,
+
+  [tabindex]:focus-visible{
+
+   outline: 3px solid var(--focus);
+
+   outline-offset: 3px;
+
+  }
+
+  img{
+
+   max-width: 100%;
+
+   height: auto;
+
+   display: block;
+
+   margin: 1em 0;
+
+  }
+
+  header, main, footer{
+
+   max-width: 70ch;
+
+  }
+
+ </style>
+
 </head>
+
 <body>
+
+ <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+
+
+ <header>
+
   <h1>¡Hola, soy Felipe López!</h1>
 
-  <p>Bienvenidos a mi primera página web. Soy estudiante de Ingeniería en Informática y me apasiona la tecnología y la programación.</p>
+  <p>Estudiante de Ingeniería en Informática, entusiasta de la tecnología y la programación.</p>
+
+ </header>
+
+
+
+ <main id="contenido">
 
   <h2>Sobre mí</h2>
-  <p>Soy una persona curiosa, siempre buscando aprender y mejorar mis habilidades. Aparte de estudiar, me gusta mucho hacer ejercicio y disfrutar de tiempo libre con amigos y familia.</p>
 
-  <h2>Mis Hobbies e Intereses</h2>
+  <p>Soy una persona curiosa, siempre buscando aprender y mejorar mis habilidades. Además de estudiar, me gusta hacer ejercicio y pasar tiempo con amigos y familia.</p>
+
+
+
+  <h2>Hobbies e intereses</h2>
+
   <ul>
-    <li>Hacer ejercicio y mantenerme activo</li>
-    <li>Estudiar y aprender nuevas tecnologías</li>
+
+   <li>Hacer ejercicio y mantenerme activo</li>
+
+   <li>Estudiar y aprender nuevas tecnologías</li>
+
   </ul>
 
-  <h2>Mi Imagen</h2>
-  <img src="prueba.jpg" alt="Felipe López sonriendo con camiseta azul" width="200" />
 
-  <h2>Enlace de Interés</h2>
-  <p>Visita mi <a href="https://www.linkedin.com/in/felipe-lopez" target="_blank" rel="noopener noreferrer">LinkedIn</a> para más detalles sobre mi perfil profesional.</p>
+
+  <h2>Mi imagen</h2>
+
+  <img src="prueba.jpg" alt="Retrato de Felipe Lopez" width="200">
+
+
+
+  <h2>Enlace de interés</h2>
+
+  <p>
+
+   <a href="https://www.linkedin.com/in/felipe-lopez"
+
+     target="_blank"
+
+     rel="noopener noreferrer"
+
+     aria-label="Ir a mi perfil profesional en LinkedIn (se abre en una pestaña nueva)">
+
+     Mi perfil profesional en LinkedIn (se abre en una pestaña nueva)
+
+   </a>
+
+  </p>
+
+ </main>
+
+
+
+ <footer>
+
+  <p>© 2025 Felipe López</p>
+
+ </footer>
+
 </body>
+
 </html>
